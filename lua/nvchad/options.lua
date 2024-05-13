@@ -47,6 +47,7 @@ o.updatetime = 250
 opt.whichwrap:append "<>[]hl"
 
 -- g.mapleader = " "
+g.mapleader = ","
 
 -- disable some default providers
 g["loaded_node_provider"] = 0

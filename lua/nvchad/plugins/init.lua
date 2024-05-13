@@ -65,13 +65,31 @@ return {
     end,
   },
 
-  {
-    "neovim/nvim-lspconfig",
-    event = "User FilePost",
-    config = function()
+  --{
+  --  "neovim/nvim-lspconfig",
+  --  event = "User FilePost",
+  --  config = function()
+  --    require("nvchad.configs.lspconfig").defaults()
+  --  end,
+  --},
+
+  -- In order to modify the `lspconfig` configuration:
+{
+  "neovim/nvim-lspconfig",
+   config = function()
       require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+   end,
+},
+
+{
+    "phaazon/hop.nvim",
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup {}
     end,
-  },
+},
+
 
   -- load luasnips + cmp related in insert mode only
   {
